@@ -1,0 +1,26 @@
+name: Docker Image Deploy
+
+on:
+  release:
+    types: [ published ]
+
+jobs:
+
+  deploy:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v3
+    - name: docker login
+      env:
+        DOCKER_USER: ${{secrets.DOCKER_USER}}
+        DOCKER_PASSWORD: ${{secrets.DOCKER_PASSWORD}}
+      run: |
+        docker login -u $DOCKER_USER -p $DOCKER_PASSWORD
+      
+    - name: Build the frontend image
+      run: docker build . --file ./Dockerfile.prod --tag evlahovlja1/siprojekat:$(date +%s) --tag evlahovlja1/siprojekat:latest
+      
+    - name: Docker Push frontend
+      run: docker push evlahovlja1/siprojekat --all-tags
