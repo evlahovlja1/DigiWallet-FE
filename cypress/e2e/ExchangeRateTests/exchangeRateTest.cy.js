@@ -45,7 +45,8 @@ describe('Testing claims', () => {
         cy.get('button').contains(/^Add$/).click()
         cy.wait(2000)
 
-        cy.get('div[role="row"]').its('length').should('eq', 3)
+        cy.get('div[class="MuiDataGrid-cellContent"]').should("contain.text", "BIH (BAM)")
+        cy.get('div[class="MuiDataGrid-cellContent"]').should("contain.text", "USA (USD)")
     })
 
     it('Add new exchange rate', () => {
@@ -72,6 +73,7 @@ describe('Testing claims', () => {
         cy.get('button').contains(/^Add$/).click()
         cy.wait(2000)
 
-        cy.get('div[role="row"]').its('length').should('eq', 5)
+        cy.get('div[class="MuiDataGrid-cellContent"]').should("contain.text", "BIH (BAM)")
+        cy.get('div[class="MuiDataGrid-cellContent"]').should("contain.text", "SWI (CHF)")
     })
 });
