@@ -4,7 +4,7 @@ describe('Testing claims', () => {
         cy.on('uncaught:exception', (err, runnable) => {
             return false;
         })
-        cy.visit('http://digipay.cc/login');
+        cy.visit('http://localhost:3000/login');
         cy.get('[type="text"]').type('evlahovlja1@etf.unsa.ba');
         cy.get('[type="password"]').type('Sifra!23');
         cy.get('.login-btn').click();

@@ -9,11 +9,11 @@ describe('User Management', () => {
 		cy.on('uncaught:exception', (err, runnable) => {
 			return false;
 		});
-		cy.visit('http://digipay.cc/login');
+		cy.visit('http://localhost:3000/login');
 		cy.login('abrulic1@etf.unsa.ba', 'String1!');
 		cy.get("[aria-label='Account']").click();
 		cy.get("[data-testid='PersonIcon']").click();
-		cy.visit('http://digipay.cc/user-management');
+		cy.visit('http://localhost:3000/user-management');
 	});
 
 	it('should contain edit and reset options', () => {

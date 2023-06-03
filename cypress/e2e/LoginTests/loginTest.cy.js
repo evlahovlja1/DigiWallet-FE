@@ -9,7 +9,7 @@ describe('Testing login form', () => {
       cy.on('uncaught:exception', (err, runnable) => {
         return false;
       })
-      cy.visit('http://digipay.cc/login');
+      cy.visit('http://localhost:3000/login');
     })
   
     it('checks the form elements', () => {

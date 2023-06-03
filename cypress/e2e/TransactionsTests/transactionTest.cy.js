@@ -10,7 +10,7 @@ describe('Testing transactions form', () => {
         return false;
       })
       
-      cy.visit('http://digipay.cc/login');
+      cy.visit('http://localhost:3000/login');
     })
   
     it('transactions', () => {
