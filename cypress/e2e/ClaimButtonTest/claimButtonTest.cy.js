@@ -6,7 +6,7 @@ describe('Testing claims form', () => {
         return false;
       })
       
-      cy.visit('http://digipay.cc/login');
+      cy.visit('http://localhost:3000/login');
     })
   
     it('Testing if filing a claim works as expected', () => {
@@ -21,7 +21,7 @@ describe('Testing claims form', () => {
         cy.get('.MuiDropzoneArea-textContainer').attachFile('walterwhite.pdf', { subjectType: 'drag-n-drop' });
         cy.wait(5000);
         cy.get('.MuiButtonBase-root').contains('File claim').click();
-        cy.visit('http://digipay.cc/transaction/claims');
+        cy.visit('http://localhost:3000/transaction/claims');
         cy.get('.MuiTableCell-root').contains('I am not in danger Skyler').should('exist');
     })
     

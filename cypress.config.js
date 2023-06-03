@@ -18,6 +18,7 @@ const transport = nodemailer.createTransport({
 
 
 module.exports = defineConfig({
+	projectId: "9hzrgx",
   e2e: {
     setupNodeEvents(on, config) {
       require('cypress-email-results')(on, config, {
