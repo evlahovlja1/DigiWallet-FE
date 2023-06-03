@@ -25,6 +25,7 @@
     "base-64": "^1.0.0",
     "bootstrap": "^5.2.3",
     "cypress": "^12.12.0",
+    "cypress-email-results": "^1.8.0",
     "cypress-file-upload": "^5.0.8",
     "dayjs": "^1.11.7",
     "jspdf": "^2.5.1",
@@ -32,6 +33,7 @@
     "material-ui-dropzone": "^3.5.0",
     "mdb-react-ui-kit": "^6.0.0",
     "moment": "^2.29.4",
+    "nodemailer": "^6.9.3",
     "react": "^18.2.0",
     "react-bootstrap": "^2.7.4",
     "react-datepicker": "^4.11.0",
@@ -56,7 +58,7 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "cypress:open": "cypress open",
-	"cypress:run": "cypress run"
+    "cypress:run": "cypress run"
   },
   "eslintConfig": {
     "extends": [
@@ -85,6 +87,6 @@
     "mime": "^3.0.0"
   },
   "overrides": {
-	"webpack": "5.82.1"
+    "webpack": "5.82.1"
   }
 }
