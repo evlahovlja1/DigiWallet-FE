@@ -19,9 +19,9 @@ module.exports = defineConfig({
       require('cypress-email-results')(on, config, {
 		email: ['user1@email.com', 'user2@email.com'],
 		emailOnSuccess: true,
-		dry: true,
+		dry: true
 		// pass your transport object
-		transport,
+		//transport,
 	  })
     },
   },
