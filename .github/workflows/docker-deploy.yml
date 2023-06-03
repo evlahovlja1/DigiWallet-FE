@@ -18,7 +18,7 @@ on: [ workflow_dispatch ]
 
 jobs:
 
-  cypress-run:
+  cypress:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -35,7 +35,8 @@ jobs:
           CI: ""
 
   deploy:
-
+    needs: cypress
+  
     runs-on: ubuntu-latest
 
     steps:
