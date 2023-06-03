@@ -1,4 +1,4 @@
-name: Docker Image Deploy
+name: Test and Deploy
 
 #on:
   #workflow_run:
