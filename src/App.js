@@ -25,7 +25,7 @@ import EinoviceRequiredData from './components/Einovice/EinoviceRequiredData/Ein
 import { useEffect } from 'react';
 import { getValidateToken } from './services/userService';
 import EinoviceApprove from './components/Einovice/EinoviceRequiredData/EinoviceApprove';
-
+import HomePage from './components/HomePage/HomePage';
 import ElectronicInvoiceTemplate from './components/ElectronicInvoices/electronicInvoices';
 import InvoiceList from './components/UserEInvoicesList/InvoiceList';
 
@@ -59,7 +59,12 @@ function App() {
 				<Router>
 					<NavBar token={token} isAdmin={isAdmin} setToken={setToken} />
 					<Routes>
-						<Route path='/' element={<h1 style={{ textAlign: 'center' }}>SI projekat</h1>} />
+						<Route 
+							path='/'
+							element={
+								<HomePage/>
+							}
+						/>
 						<Route
 							path='/transactions'
 							element={
