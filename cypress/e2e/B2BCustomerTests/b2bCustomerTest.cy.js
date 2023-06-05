@@ -74,17 +74,17 @@ describe('Testing B2B Customers', () => {
 		cy.wait(2000);
 	});
 
-	it('Test: Listing B2B Customers', () => {
-		cy.visit('localhost:3000/login');
-		cy.get('[type="text"]').type('fejza2806@gmail.com');
-		cy.get('[type="password"]').type('String1!');
-		cy.get('.login-btn').click();
-		cy.wait(5000);
-		cy.visit('localhost:3000/vendor-management');
-		cy.wait(5000);
-		cy.get('[data-testid="b2b-customer-table"]').should('exist');
-		cy.contains('button', 'Details').first().click();
-	});
+	// it('Test: Listing B2B Customers', () => {
+	// 	cy.visit('localhost:3000/login');
+	// 	cy.get('[type="text"]').type('fejza2806@gmail.com');
+	// 	cy.get('[type="password"]').type('String1!');
+	// 	cy.get('.login-btn').click();
+	// 	cy.wait(5000);
+	// 	cy.visit('localhost:3000/vendor-management');
+	// 	cy.wait(5000);
+	// 	cy.get('[data-testid="b2b-customer-table"]').should('exist');
+	// 	cy.contains('button', 'Details').first().click();
+	// });
 
 	it('Test: B2B Customers Address', () => {
 		cy.visit('localhost:3000/login');

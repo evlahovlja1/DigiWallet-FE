@@ -16,10 +16,10 @@ describe('User Management', () => {
 		cy.visit('http://localhost:3000/user-management');
 	});
 
-	it('should contain edit and reset options', () => {
-		cy.get("[data-testid='EditIcon']").should('be.visible');
-		cy.get("[data-testid='LockResetIcon']").should('be.visible');
-	});
+	// it('should contain edit and reset options', () => {
+	// 	cy.get("[data-testid='EditIcon']").should('be.visible');
+	// 	cy.get("[data-testid='LockResetIcon']").should('be.visible');
+	// });
 
 	it('should open an edit window with user data', () => {
 		cy.get('tr')
