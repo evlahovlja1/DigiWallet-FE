@@ -13,7 +13,11 @@ name: Test and Deploy
   #release:
     #types: [ published ]
     
-on: [ workflow_dispatch ]
+#on: [ workflow_dispatch ]
+
+on:
+  push:
+    branches: [ main ]
 
 
 jobs:
@@ -29,6 +33,8 @@ jobs:
           install-command: npm install --legacy-peer-deps
           #build: npm run build --legacy-peer-deps
           start: npm start
+          wait-on: 'http://localhost:3000'
+          wait-on-timeout: 120
           record: true
         env:
           CYPRESS_RECORD_KEY: ${{ secrets.CYPRESS_RECORD_KEY }}
